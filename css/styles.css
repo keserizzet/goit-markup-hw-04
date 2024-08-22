@@ -68,7 +68,7 @@ header nav ul li a:hover{
 header nav ul li a:after{
     content: '';
     position: absolute;
-    left: 25.7%;
+    left: 27%;
     bottom: 0;
     width: 2.5%;
     height: 4px;
