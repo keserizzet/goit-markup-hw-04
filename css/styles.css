@@ -61,6 +61,18 @@ header .menu{
 }
 header nav ul li a:hover{
     color: #9747FF;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+              background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+header nav ul li a:after{
+    content: '';
+    position: absolute;
+    left: 25.7%;
+    bottom: 0;
+    width: 2.5%;
+    height: 4px;
+    background-color: #404BBF;
 }
 header nav ul li a:active{
     border-bottom: 3px solid #9747FF;
@@ -71,6 +83,9 @@ header .contact{
 }
 header .contact a:hover{
     color: #9747FF;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+              background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .slider{
     height: 800px;
@@ -79,6 +94,12 @@ header .contact a:hover{
     align-items: center;
     flex-direction: column;
     background-color: #2E2F42;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent),
+              url('../images/people-office1.jpg') center/cover no-repeat;
+}
+.slider::after{
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8)); 
 }
 .slider .container{
     display: flex;
@@ -103,6 +124,9 @@ header .contact a:hover{
     padding-bottom: 20px;
     padding-right: 10px;
     padding-left: 10px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+              background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .slider button:hover{
     background-color: #404BBF;
@@ -127,10 +151,18 @@ header .contact a:hover{
     gap: 15px;
     flex-direction: column;
 }
+.yazilar li .icon{
+    background-color: #F4F4FD;
+    padding: 35px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #8E8F99;
+    border-radius: 5px;
+}
 .yazilar ul{
     display: flex;
     list-style: none;
-    gap: 60px;
+    gap: 33px;
     justify-content: center;
     align-items: center;
 }
@@ -183,6 +215,9 @@ header .contact a:hover{
     padding: 17px 17px;
     position: relative;
     top: 15px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+              background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team ul li .name ul a:hover{
     background-color: #31D0AA;
@@ -222,17 +257,23 @@ header .contact a:hover{
     list-style: none;
     gap: 20px;
 }
+
 .portfolio ul li{
     background-color: #FFFFFF;
     border: 1px solid #E7E9FC;
+    
 }
 .portfolio ul li:active{
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.6s ease;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+              background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio ul li:hover{
     box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
-    transition: all 0.6s ease;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+              background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .image-container {
     position: relative;
@@ -264,23 +305,33 @@ header .contact a:hover{
     align-items: first baseline;
     cursor: pointer;
     opacity: 0;
-    transition: all 1s ease;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+              background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio ul li .image:active + .bank{
     display: flex;
-    opacity: 1;
+    opacity: 1;  
 }
 .portfolio ul li .image{
     width: 100%;
     height: auto;
     cursor: pointer;
     display: block;
-    transition: all 1s ease;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+              background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .portfolio ul li .image:active{
     visibility: hidden;
     opacity: 0;
+    
 }
+.portfolio-list:hover .bank {
+    opacity: 1; /* Hover durumunda görünür */
+    
+  }
 footer{
     height: 300px;
     background-color: #2E2F42;
@@ -288,11 +339,43 @@ footer{
 }
 footer .container{
 display: flex;
-flex-direction: column;
 gap: 25px;
 width: 1158px;
 align-items: start;
-padding: 0 350px;
+position: relative;
+left: 21%;
+
+}
+footer .container .sol{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+footer .container .sag{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #fff;
+    position: relative;
+    left: 10%;
+}
+footer .sag ul{
+    display: flex;
+    gap: 20px;
+}
+footer .sag ul li{
+    background-color: #4D5AE5;
+    border-radius: 50%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+footer .sag ul li:hover{
+    background-color: #31D0AA;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+              background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 footer a{
     text-decoration: none;
