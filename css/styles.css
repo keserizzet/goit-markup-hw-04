@@ -24,7 +24,7 @@ header .menuler .sol{
     display: flex;
     width: 50%;
     align-items: center;
-    margin-left: 15%;
+    margin-left: 9%;
     gap: 50px;
 }
 
@@ -32,7 +32,7 @@ header .menuler .sag{
     display: flex;
     justify-content: end;
     width: 50%;
-    margin-right: 15%;
+    margin-right: 9%;
 }
 header .menuler .sag ul{
     display: flex;
@@ -161,7 +161,7 @@ header .contact a:hover{
     border: 1px solid #8E8F99;
     border-radius: 5px;
     align-items: center;
-    width: 350px;
+    width: 291px;
     height: 160px;
 }
 .yazilar li .icon p{
